@@ -31,7 +31,7 @@
                     <ul>
                         <li class='active'>
                             <a href='#'>
-                                <span>Home</span>
+                                <span>Trang chủ</span>
                             </a>
                         </li>
                         @foreach($data as $dt)
@@ -57,13 +57,15 @@
                         @endforeach
                         <li class='last'>
                             <a href='#'>
-                                <span>Contact</span>
+                                <span>Liên hệ</span>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-            @yield('content')
+            <div class="col-xs-12 col-md-9">
+                @yield('content')
+            </div>
         </div>    
     </div>
     <div class="footer container">
@@ -92,6 +94,7 @@
                 e.preventDefault()
                 $(this).tab('show')
             })
+            $('.carousel').carousel()
         });
     </script>
 </body>

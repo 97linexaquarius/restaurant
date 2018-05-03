@@ -1,6 +1,6 @@
 @extends('master')
 @section('content')
-<div class="col-xs-12 col-md-9">
+
     <div id="gallery" style="display:none;">
 
         <img alt="Preview Image 1" src="https://picsum.photos/800/400/?image=0" data-image="https://picsum.photos/800/400/?image=0"
@@ -75,5 +75,5 @@
 
         </div>
     </div>
-</div>       
+      
 @endsection

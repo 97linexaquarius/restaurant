@@ -7,9 +7,11 @@ use Illuminate\Support\Facades\DB;
 use App\Category;
 class UIController extends Controller
 {
-    public function getHome(){
-        // $data = Category::all();
-            return view('product');
-            // , compact('data')
+    public function getHome(){  
+        return view('home');
+    }
+
+    public function getProduct(){
+        return view('product');
     }
 }

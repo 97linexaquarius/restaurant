@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'UIController@getHome');
+Route::get('/product', 'UIController@getProduct');
