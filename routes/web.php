@@ -11,5 +11,9 @@
 |
 */
 
-Route::get('/', 'UIController@getHome');
-Route::get('/product', 'UIController@getProduct');
+Route::get('/', 'UIController@getHome')->name('home');
+Route::get('san-pham/{id}', 'UIController@getProduct');
+
+Route::get('foo', function () {
+    return 'Hello World';
+});

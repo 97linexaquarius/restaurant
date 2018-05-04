@@ -2,25 +2,13 @@
 @section('content')
 
     <div id="gallery" style="display:none;">
-
-        <img alt="Preview Image 1" src="https://picsum.photos/800/400/?image=0" data-image="https://picsum.photos/800/400/?image=0"
-            data-description="Preview Image 1 Description" class="responsive-img">
-
-        <img alt="Preview Image 2" src="https://picsum.photos/800/400/?image=521" data-image="https://picsum.photos/800/400/?image=521"
-            data-description="Preview Image 2 Description" class="responsive-img">
-
-        <img alt="Preview Image 2" src="https://picsum.photos/800/400/?image=241" data-image="https://picsum.photos/800/400/?image=241"
-            data-description="Preview Image 2 Description" class="responsive-img">
-
-        <img alt="Preview Image 2" src="https://picsum.photos/800/400/?image=852" data-image="https://picsum.photos/800/400/?image=852"
-            data-description="Preview Image 2 Description" class="responsive-img">
-
-        <img alt="Preview Image 2" src="https://picsum.photos/800/400/?image=465" data-image="https://picsum.photos/800/400/?image=465"
-            data-description="Preview Image 2 Description" class="responsive-img">
-
-        <img alt="Preview Image 2" src="https://picsum.photos/800/400/?image=555" data-image="https://picsum.photos/800/400/?image=555"
-            data-description="Preview Image 2 Description" class="responsive-img">
-
+   
+    @foreach($food->image as $image)
+    <!-- alt va description dung de lam name va title cho mon an -->
+        <img alt="" src="{{route('home')}}/images/uploads/{{$image->name}}" data-image="{{route('home')}}/images/uploads/{{$image->name}}"
+            data-description="" class="img-responsive">
+    @endforeach
+   
     </div>
     <ul class="nav nav-tabs" style="margin-top: 10px;">
         <li class="active">
@@ -33,13 +21,14 @@
 
     <div class="tab-content">
         <div id="intro" class="tab-pane fade in active">
-            <h3>CHÁO HÀU</h3>
-            <p class="price">Giá: <span></span> VNĐ/1 phần</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua.</p>
-                
-            
+        
+            <h3 style="text-transform: uppercase;">{{$food->name}}</h3> 
+            <p class="price">Giá: <span>{{$food->price}}</span> VNĐ/1 phần</p>
+            <p>{{$food->desc}}</p>
+       
+       
         </div>
+        
         <div id="cmt" class="tab-pane fade">
             <h3>Menu 1</h3>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

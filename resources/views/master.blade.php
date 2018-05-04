@@ -35,16 +35,16 @@
                             </a>
                         </li>
                         @foreach($data as $dt)
-                        
+                       
                         <li class={{ count($dt->food)>0 ? 'has-sub' : '' }}>
-                            <a href='#'>
+                            <a href=''>
                                 <span>{{$dt->name}}</span>
                             </a>
                                 @if(count($dt->food)>0)
                                 <ul>
                                 @foreach($dt->food as $food)
                                 <li>
-                                    <a href='#'>
+                                    <a href='{{route('home')}}/san-pham/{{$food->id}}'>
                                         <span>{{$food->name}}</span>
                                     </a>
                                 </li>

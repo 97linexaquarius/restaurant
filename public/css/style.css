@@ -126,3 +126,12 @@
   background-color: #c10960;
   border-top: 4px solid #1b9bff;
 }
+.customer{
+  background-image: url('../images/bg.jpg');
+  height:auto;
+}
+.thumbnail{
+  background-color: transparent;
+  border: none;
+  padding: 30px;
+}
